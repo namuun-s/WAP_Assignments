@@ -156,7 +156,7 @@ section.moods p{
     display: inline-block;
     margin: 0 0 0 10px;
     color: #fecf02;
-    background-image: url(/images/smiley.png);
+    background-image: url(images/smiley.png);
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: contain;
