@@ -102,7 +102,6 @@ section.moods p{
 .moods .image-wrap img{
     width: auto;
     height: 100%;
-    max-width: auto;
 }
 .lessons q{
     display: none;
