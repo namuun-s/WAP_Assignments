@@ -1,0 +1,101 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    line-height: 1.4;
+    font-family: Georgia, Garamond, sans-serif;
+    font-size: 11pt;
+    background-image: url(images/silverware.jpg);
+    background-repeat: repeat;
+    color: #404040;
+    letter-spacing: 0.5px;
+}
+.container{
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;    
+    background-color: #ffffff;    
+    box-shadow: 1px 1px 10px 1px rgba(0,0,0,.4);
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+footer{
+    padding-top: 30px;
+    margin: 0 30px;
+}
+h1{
+    font-weight: bold;
+    font-size: 22pt;
+    text-align: center;
+}
+h1, h2{
+    color: #A4A400;  
+    font-family: 'Lucida Sans Unicode', Helvetica, Arial, sans-serif;
+    font-size: 18pt;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+}
+h1 span, h2 span{
+    background-color: #F0F0F0;
+    display: inline-block;
+    /* text-decoration: underline; */
+    position: relative;
+}
+h1 span::after, h2 span::after{
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 2px;
+    background: #A4A400;
+}
+h1{
+  font-weight: 700;  
+}
+a{
+    color: #A4A400;
+}
+section{
+    padding: 20px;
+    margin: 0 30px;
+    border-bottom: 2px solid #ccc;
+}
+.info{
+    max-width: 150px;
+    margin-top: 15px;
+}
+.linethrough{
+    text-decoration: line-through;
+}
+.comments .comment-wrap{
+    background-color: #FFFFA8;
+    margin-bottom: 15px;
+    font-style: italic;
+    margin-left: 2em;
+}
+em{
+    font-weight: 700;
+}
+ul li{
+    list-style-image: url(images/pie_icon.gif);
+}
+li{
+    margin-bottom: 10px;
+}
+.links a{
+    display: block;
+}
+.right{
+    float: right;
+}
+.clr{
+    height: 0;
+    clear: both;
+}
+pre{
+    text-align: right;
+}
+.pt30{
+    padding-top: 30px;
+}
