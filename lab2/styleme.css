@@ -24,9 +24,7 @@ section{
     padding: 20px;
     background-color: #ffffff;
     margin: 30px 0;
-    -moz-box-shadow:    1px 1px 10px 1px rgba(0,0,0,.4);
-    -webkit-box-shadow: 1px 1px 10px 1px rgba(0,0,0,.4);
-    box-shadow:         1px 1px 10px 1px rgba(0,0,0,.4);
+    box-shadow: 1px 1px 10px 1px rgba(0,0,0,.4);
 }
 .about-me span{
     display: inline-flex;
@@ -104,7 +102,6 @@ section.moods p{
 .moods .image-wrap img{
     width: auto;
     height: 100%;
-    max-width: auto;
 }
 .lessons q{
     display: none;
@@ -159,7 +156,7 @@ section.moods p{
     display: inline-block;
     margin: 0 0 0 10px;
     color: #fecf02;
-    background-image: url(/images/smiley.png);
+    background-image: url(images/smiley.png);
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: contain;
