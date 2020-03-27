@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAP - Assignemnt 4 - Web Form 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+       <section>
+            <h1>Web Form 1</h1>
+            <form action="/some_url" method="POST">
+                <div class="input text">                    
+                    <label for="email">Email address</label>
+                    <!-- I didn't add id attribute to the input, because I'll not use id for styles. -->
+                    <input type="email" name="email" placeholder="Enter email" required/>
+                    <p class="tip">We'll never share  your email with anyone else.</p>
+                </div>
+                <div class="input text">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" placeholder="Password" min="10" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}$" title="Password must contain at least one number and one uppercase and lowercase letter" required />
+
+                </div>
+                <div class="input text">
+                    <label for="website">Website</label>
+                    <input type="text" name="website" placeholder="Enter website" pattern="https?://.+" title="Please enter an valid URL. For example: https://www.miu.edu"/>
+                    <p class="tip">Please enter a valid URL. For example: https://www.miu.edu</p>
+                </div>
+                <div class="input checkbox">
+                    <input type="checkbox" value="true" name="checkMeOut">
+                    <label for="checkMeOut">Check me out</label>
+                </div>
+                <div class="input submit">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+       </section>
+       <footer>
+            <div class="row">
+                <div class="col-half">&copy; Maharishi International University, Namuun Sainbayar</div>
+                
+                <div class="col-half ta-right validators">
+                    <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+                        <img src=http://jigsaw.w3.org/css-validator/images/vcss alt="Valid CSS!"/>
+                    </a>
+
+                    <a href="https://validator.w3.org/check/referer" target="_blank">
+                        <img src=http://mumstudents.org/cs472/2013-09/images/w3c-html.png alt="Validate"
+                        />
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

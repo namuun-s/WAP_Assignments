@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAP - Assignment 4 - Web Form 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">MUM Golden Dome Market ::: SRM System</div>
+        <nav>
+            <a href="/products">Products</a>
+            <a href="/suppliers">Suppliers</a>
+        </nav>
+    </header>
+    <div class="container demo2">
+        <section>
+            <h1>New Product Form</h1>
+
+            <form action="/some_url" method="POST">
+                <div class="row">
+                    <div class="input text col-half">
+                        <label for="productNumber">Product Number</label>
+                        <input type="text" name="productNumber" required placeholder="AB123" 
+                        pattern="^(?=.*\d)(?=.*[a-zA-Z]).{5}$" title="Product number must contain two letters and three numbers. Example: AB123"/>                        
+                    </div>
+                    <div class="input text col-half">
+                        <label for="name">Quantity in stock</label>
+                        <input type="number" name="quantityInStock" min="0" required />
+                    </div>
+                    <div class="input text col-half">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" required pattern="[a-zA-Z]{2,25}" title="Name can be only letters." />    
+                    </div>
+                    <div class="input select col-half">
+                        <label for="name">Supplier</label>
+                        <select name="supplier" id="supplier" required>
+                            <option value="">Select a supplier</option>
+                            <option value="1">Supplier 1</option>
+                            <option value="2">Supplier 2</option>
+                            <option value="3">Supplier 3</option>
+                        </select>
+                    </div>
+                    <div class="input text col-half">
+                        <label for="unitPrice">Unit price</label>
+                        <input type="text" name="unitPrice" required min="0.00" pattern="[0-9]*(\.)?[0-9]?[0-9]?" title="Please enter a valid price."/>
+                    </div>
+                    <div class="input date col-half">
+                        <label for="name">Date supplied</label>
+                        <input type="date" name="dateSupplied" />
+                        <p class="tip">Enter a valid Date.</p>
+                    </div>
+                </div>
+                <div class="input submit">
+                    <input type="reset" class="btn btn-reset" value="Reset">
+                    <a href="#" class="btn btn-cancel">Cancel</a>
+                    <input type="submit" class="btn btn-submit" value="Submit">
+                </div>
+            </form>
+        </section>
+        <footer>
+            <div class="row">
+                <div class="col-half">&copy; Maharishi International University, Namuun Sainbayar</div>
+                
+                <div class="col-half ta-right validators">
+                    <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+                        <img src=http://jigsaw.w3.org/css-validator/images/vcss alt="Valid CSS!"/>
+                    </a>
+
+                    <a href="https://validator.w3.org/check/referer" target="_blank">
+                        <img src=http://mumstudents.org/cs472/2013-09/images/w3c-html.png alt="Validate"
+                        />
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
