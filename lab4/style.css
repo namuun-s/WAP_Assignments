@@ -71,8 +71,8 @@ footer .validators a{
 header{
     color: #ffffff;
     padding: 25px 50px;
-    background: #4fb1ea; /* Old browsers */
-    background: linear-gradient(to bottom,  #4fb1ea 0%,#239fe5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: #4fb1ea; /* Old browsers */    
+    background: linear-gradient(to bottom,  #4fb1ea 0%,#239fe5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */    
 }
 .logo{
     font-size: 20px;

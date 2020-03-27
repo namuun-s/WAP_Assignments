@@ -22,19 +22,19 @@
                 <div class="row">
                     <div class="input text col-half">
                         <label for="productNumber">Product Number</label>
-                        <input type="text" name="productNumber" required placeholder="AB123" 
+                        <input type="text" id="productNumber" name="productNumber" required placeholder="AB123" 
                         pattern="^(?=.*\d)(?=.*[a-zA-Z]).{5}$" title="Product number must contain two letters and three numbers. Example: AB123"/>                        
                     </div>
                     <div class="input text col-half">
-                        <label for="name">Quantity in stock</label>
-                        <input type="number" name="quantityInStock" min="0" required />
+                        <label for="quantityInStock">Quantity in stock</label>
+                        <input type="number" id="quantityInStock" name="quantityInStock" min="0" required />
                     </div>
                     <div class="input text col-half">
                         <label for="name">Name</label>
-                        <input type="text" name="name" required pattern="[a-zA-Z]{2,25}" title="Name can be only letters." />    
+                        <input type="text" id="name" name="name" required pattern="[a-zA-Z]{2,25}" title="Name can be only letters." />    
                     </div>
                     <div class="input select col-half">
-                        <label for="name">Supplier</label>
+                        <label for="supplier">Supplier</label>
                         <select name="supplier" id="supplier" required>
                             <option value="">Select a supplier</option>
                             <option value="1">Supplier 1</option>
@@ -44,11 +44,11 @@
                     </div>
                     <div class="input text col-half">
                         <label for="unitPrice">Unit price</label>
-                        <input type="text" name="unitPrice" required min="0.00" pattern="[0-9]*(\.)?[0-9]?[0-9]?" title="Please enter a valid price."/>
+                        <input type="text" id="unitPrice" name="unitPrice" required min="0.00" pattern="[0-9]*(\.)?[0-9]?[0-9]?" title="Please enter a valid price."/>
                     </div>
                     <div class="input date col-half">
-                        <label for="name">Date supplied</label>
-                        <input type="date" name="dateSupplied" />
+                        <label for="dateSupplied">Date supplied</label>
+                        <input type="date" id="dateSupplied" name="dateSupplied" />
                         <p class="tip">Enter a valid Date.</p>
                     </div>
                 </div>

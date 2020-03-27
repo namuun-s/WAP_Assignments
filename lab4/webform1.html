@@ -13,22 +13,21 @@
             <form action="/some_url" method="POST">
                 <div class="input text">                    
                     <label for="email">Email address</label>
-                    <!-- I didn't add id attribute to the input, because I'll not use id for styles. -->
-                    <input type="email" name="email" placeholder="Enter email" required/>
+                    <input type="email" id="email" name="email" placeholder="Enter email" required/>
                     <p class="tip">We'll never share  your email with anyone else.</p>
                 </div>
                 <div class="input text">
                     <label for="password">Password</label>
-                    <input type="password" name="password" placeholder="Password" min="10" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}$" title="Password must contain at least one number and one uppercase and lowercase letter" required />
+                    <input type="password" id="password" name="password" placeholder="Password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}$" title="Password must contain at least one number and one uppercase and lowercase letter" required />
 
                 </div>
                 <div class="input text">
                     <label for="website">Website</label>
-                    <input type="text" name="website" placeholder="Enter website" pattern="https?://.+" title="Please enter an valid URL. For example: https://www.miu.edu"/>
+                    <input type="text" id="website" name="website" placeholder="Enter website" pattern="https?://.+" title="Please enter an valid URL. For example: https://www.miu.edu"/>
                     <p class="tip">Please enter a valid URL. For example: https://www.miu.edu</p>
                 </div>
                 <div class="input checkbox">
-                    <input type="checkbox" value="true" name="checkMeOut">
+                    <input type="checkbox" id="checkMeOut" value="true" name="checkMeOut">
                     <label for="checkMeOut">Check me out</label>
                 </div>
                 <div class="input submit">
