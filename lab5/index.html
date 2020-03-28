@@ -142,7 +142,7 @@ function findLongestWord(a){
 <pre>
     function filterLongWords(a,index){
         const c = a.filter(function(elem, i, array){
-            return i >= index;});
+            return elem.length > index;});
         return c;
     }
 </pre>

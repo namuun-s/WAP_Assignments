@@ -149,12 +149,12 @@ window.onload = showClock();
 
 //Using the above functions (1 - 13)
 function findMax(){
-    let maxVal = max(document.getElementById("max1").value, document.getElementById("max2").value);
+    let maxVal = max(parseInt(document.getElementById("max1").value), parseInt(document.getElementById("max2").value));
     document.getElementById("resultMax").innerHTML = maxVal;
 }
 
 function findMax2(){
-    let maxVal = maxOfThree(document.getElementById("max2_1").value, document.getElementById("max2_2").value, document.getElementById("max2_3").value);
+    let maxVal = maxOfThree(parseInt(document.getElementById("max2_1").value), parseInt(document.getElementById("max2_2").value), parseInt(document.getElementById("max2_3").value));
     document.getElementById("resultMax2").innerHTML = maxVal;
 }
 
