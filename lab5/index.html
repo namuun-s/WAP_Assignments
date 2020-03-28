@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAP - Assignment 5 - Introduction of JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container js">
+        <section class="js-intro">
+            <h1>Wap - Assignment 5 - Introduction of JavaScript</h1>
+
+            <h3>Task #1-13 - JavaScript Functions</h3>
+            <div class="wrapper">
+                <input type="number" name="max1" id="max1" />
+                <input type="number" name="max2" id="max2" />
+                <button id="btnMax" onclick="findMax()">max()</button>
+                <label class="result">Result: <span id="resultMax"></span> </label>
+                <a href="#" class="viewCode" onclick="toggleCode(this,'code1');return false;">View Code</a>
+                <div id="code1" class="code">
+<pre>
+        function max(a,b){
+            let max;
+            if(a>=b) max = a;
+            else max = b;
+            return max;
+        }
+</pre>
+                </div>
+            </div>
+            <div class="wrapper">
+                <input type="number" name="max2_1" id="max2_1" />
+                <input type="number" name="max2_2" id="max2_2" />
+                <input type="number" name="max2_3" id="max2_3" />
+                <button id="btnMax2" onclick="findMax2()">maxOfThree()</button>
+                <label class="result">Result: <span id="resultMax2"></span> </label>
+                <a href="#" class="viewCode" onclick="toggleCode(this,'code2');return false;">View Code</a>
+                <div id="code2" class="code">
+<pre>
+        function maxOfThree(a, b, c){
+            let max;
+            if(a>=b){
+                if(a>=c) max = a;
+                else if(c>=b) max = c;
+                else max = b;
+            }
+            else{
+                if(b>=c) max = b;
+                else max = c;
+            }
+            return max;
+        }
+</pre>
+                </div>
+            </div>
+            <div class="wrapper">
+                <input type="text" name="letter" id="letter" minlength="1" maxlength="1" />
+                <button id="btnVowel" onclick="checkVowel()">isVowel()</button>
+                <label class="result">Result: <span id="resultVowel"></span> </label>
+                <a href="#" class="viewCode" onclick="toggleCode(this,'code3');return false;">View Code</a>
+                <div id="code3" class="code">
+<pre>
+        function isVowel(ch){
+            if(ch === 'a') return true;
+            else return false;
+        }
+</pre>
+                </div>
+            </div>
+            <div class="wrapper">
+                <input type="text" name="numbers" id="numbers" class="medium" placeholder="1,2,3,4" value="1,2,3,4" />
+                <button id="btnSum" onclick="calcSum()">sum()</button>
+                <button id="btnMultiply" onclick="calcMultiply()">multiply()</button>
+                <label class="result">Result: <span id="resultCalc"></span> </label>
+                <a href="#" class="viewCode" onclick="toggleCode(this,'code4');return false;">View Code</a>
+                <div id="code4" class="code">
+                    
+<pre>    
+        function sum(a){
+            let sum = 0;
+            for(let i=0;i&lt;a.length;i++){       
+                sum += parseInt(a[i]);
+            }
+            return sum;
+        }
+        function multiply(a){
+            let result = 1;    
+            let x = 0;
+            while(x/&lt;a.length){
+                result *= a[x];
+                x++;
+            }
+            return result;
+        }     
+</pre>
+                </div>          
+            </div>
+            <div class="wrapper">
+                <input type="text" name="string" id="string" />
+                <button id="btnReverse" onclick="reverseStr()">reverse()</button>
+                <label class="result">Result: <span id="resultReverse"></span> </label>
+                <a href="#" class="viewCode" onclick="toggleCode(this,'code5');return false;">View Code</a>
+                <div id="code5" class="code">
+<pre>
+        function reverse(str){
+            let x = str.length-1;
+            let reversed = '';
+            while(x>=0){
+                reversed += str.charAt(x);
+                x--;
+            }
+            return reversed;
+        }
+</pre>
+                </div>
+            </div>
+            <div class="wrapper">
+                <input type="text" name="strings" id="strings" class="long" value="wap,software,engineering,test" placeholder="wap,software,engineering,test" />
+                <button id="btnFindLongest" onclick="findLongest()">findLongestWord()</button>
+                <label class="result">Result: <span id="resultFindLongest"></span> </label>
+                <a href="#" class="viewCode" onclick="toggleCode(this,'code6');return false;">View Code</a>
+                <div id="code6" class="code longer">
+<pre>
+function findLongestWord(a){
+    let result = a[0].length;
+    for(let i=1;i&lt;a.length;i++){       
+        if(a[i].trim().length&gt;result) result = a[i].length;
+    }
+    return result;
+}
+</pre>
+                </div>
+            </div>
+            <div class="wrapper">
+                <input type="text" name="strings2" id="strings2" class="long" value="wap,software,engineering,test" placeholder="wap,software,engineering,test" />
+                <input type="number" name="index" id="index" min="0" maxlength="1" value="3"/>
+                <button id="btnFindWords" onclick="findLongest2()">filterLongWords()</button>
+                <label class="result">Result: <span id="resultFindWords"></span> </label>
+                <a href="#" class="viewCode" onclick="toggleCode(this,'code7');return false;">View Code</a>
+                <div id="code7" class="code longer">
+<pre>
+    function filterLongWords(a,index){
+        const c = a.filter(function(elem, i, array){
+            return i >= index;});
+        return c;
+    }
+</pre>
+                </div>
+            </div>
+            <div class="wrapper">
+                <input type="text" name="numbers2" id="numbers2" class="medium" placeholder="1,2,3,4" value="1,2,3,4" />
+                <button id="btnSumOfSquares" onclick="calcSumOfSquares()">computeSumOfSquares()</button>
+                <label class="result">Result: <span id="resultSumOfSquares"></span> </label>
+                <a href="#" class="viewCode" onclick="toggleCode(this,'code8');return false;">View Code</a>
+                <div id="code8" class="code longer">
+<pre>
+function computeSumOfSquares(a){
+    const f = a.reduce(function(prevVal, elem, i, array){
+        return parseInt(prevVal) + parseInt(elem*elem);},0); 
+    return f;
+}
+</pre>
+                </div>
+            </div>
+            <div class="wrapper">
+                <input type="text" name="numbers3" id="numbers3" class="medium" placeholder="1,2,3,4,5,6,7" value="1,2,3,4,5,6,7" />
+                <button id="btnPrintOdd" onclick="printOdd()">printOddNumbersOnly()</button>
+                <label class="result">Result: <span id="resultPrintOdd"></span> </label>
+                <a href="#" class="viewCode" onclick="toggleCode(this,'code9');return false;">View Code</a>
+                <div id="code9" class="code longer">
+<pre>
+    function printOddNumbersOnly(a){
+        const c = a.filter(function(elem, i, array){
+            return elem % 2 !== 0;});
+        return c;
+    }
+</pre>
+                </div>
+            </div>
+            <div class="wrapper">
+                <input type="text" name="numbers4" id="numbers4" class="medium" placeholder="1,2,3,4" value="1,2,3,4" />
+                <button id="btnSse" onclick="calcSumOfSquaresOfEvens()">computeSumOfSquaresOfEvensOnly()</button>
+                <label class="result">Result: <span id="result10"></span> </label>
+                <a href="#" class="viewCode" onclick="toggleCode(this,'code10');return false;">View Code</a>
+                <div id="code10" class="code longer2">
+<pre>
+function computeSumOfSquaresOfEvensOnly(a){
+    const c = a.filter(function(elem, i, array){
+        return parseInt(elem) % 2 == 0;}).
+        reduce(function(prevVal, elem2, j, array){
+        return parseInt(prevVal) + parseInt(elem2)*parseInt(elem2);},0)
+    return c;
+}
+</pre>
+                </div>
+            </div>
+            <div class="wrapper">
+                <input type="text" name="numbers" id="numbers5" class="medium" placeholder="1,2,3,4" value="1,2,3,4"/>
+                <button id="btnSum2" onclick="calcSum2()">sum()  using Array.reduce()</button>
+                <button id="btnMultiply2" onclick="calcMultiply2()">multiply() using Array.reduce()</button>
+                <label class="result">Result: <span id="resultCalc2"></span> </label>
+                <a href="#" class="viewCode" onclick="toggleCode(this,'code11');return false;">View Code</a>
+                <div id="code11" class="code longer">
+<pre>
+function sum(a){
+    const f = a.reduce(function(prevVal, elem, i, array){
+        return parseInt(prevVal) + parseInt(elem);}); 
+    return f;
+}
+function multiply(a){
+    const f = a.reduce(function(prevVal, elem, i, array){
+        return parseInt(prevVal) * parseInt(elem);}); 
+    return f;
+}
+</pre>
+                </div>
+            </div>
+            <div class="wrapper">
+                <input type="text" name="numbers6" id="numbers6" class="medium" placeholder="8,4,7,2,1" value="8,4,7,2,1" />
+                <button id="btn12" onclick="findSecond()">findSecondBiggest()</button>
+                <label class="result">Result: <span id="result12"></span> </label>
+                <a href="#" class="viewCode" onclick="toggleCode(this,'code12');return false;">View Code</a>
+                <div id="code12" class="code">
+<pre>
+function findSecondBiggest(a){
+    let max = a[0];
+    let second = 0;    
+    for (var i = 0, n = a.length; i &lt; n; ++i) {
+        var nr = +a[i];    
+        if (nr &gt; max) {
+            second = max; 
+            max = nr;
+        } else if (nr &lt; max &amp;&amp; nr &gt; second) {
+            second = nr; 
+        }
+    }
+    return second;
+}
+</pre>
+                </div>
+            </div>
+            <div class="wrapper">
+                <input type="text" name="n" id="n"  />
+                <input type="text" name="a" id="a"  />
+                <input type="text" name="b" id="b"  />
+                <button id="btn13" onclick="commputeFib()">printFibo()</button>
+                <label class="result">Result: <span id="result13"></span> </label>
+                <a href="#" class="viewCode" onclick="toggleCode(this,'code13');return false;">View Code</a>
+                <div id="code13" class="code">
+<pre>
+function printFibo(n,a,b){
+    let arr = [a, b];    
+    if(n==1) return arr = [a];
+    
+    for (let i = 2; i &lt; n; i++){
+        arr.push(arr[i - 2] +  arr[i -1]);        
+    }
+    return arr.join(',');
+}
+</pre>
+                </div>
+            </div>
+                <div class="wrapper">
+                    <h3>Task #15 - Ticking Counter Clock</h3>
+                    <div id="clock"></div>
+                </div>            
+        </section>
+        <footer>
+            <div class="row">
+                <div class="col-half">&copy; Maharishi International University, Namuun Sainbayar</div>
+                
+                <div class="col-half ta-right validators">
+                    <a href="https://jigsaw.w3.org/css-validator/check/referer">
+                        <img src=http://jigsaw.w3.org/css-validator/images/vcss alt="Valid CSS!"/>
+                    </a>
+
+                    <a href="https://validator.w3.org/check/referer">
+                        <img src=http://mumstudents.org/cs472/2013-09/images/w3c-html.png alt="Validate"
+                        />
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>    
+    <script src="functions.js"></script>
+</body>
+</html>
