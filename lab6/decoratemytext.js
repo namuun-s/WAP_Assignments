@@ -53,8 +53,8 @@ window.addEventListener('load', () => {
 
 function increaseFontSize(){
     "use strict";
-    /* I've encountered the problem when read element's font-size from the CSS.*/
-    /* Then I've found out that I need to use window's 'getComputedStyle' to read element's computed style. */
+    /* I've encountered the problem when reading the element's font-size from the CSS.*/
+    /* Then I've found out that I need to use window's 'getComputedStyle' to read the element's computed style. */
     const element = document.getElementById('text');
     let style = window.getComputedStyle(element);
     let increasedSize = parseInt(style.fontSize) + 2;
@@ -81,3 +81,8 @@ function convertStr(str){
     }
     return str;
 }
+
+/* Comments about JSHint */
+// During this assignment, I have tried the JSHint first time. 
+// Using the JSHint, I have fixed 1 error which is “Use the function form of "use strict".(W097)”. 
+// Also, I have fixed 1 kind of warning which is “Unused parameter”
