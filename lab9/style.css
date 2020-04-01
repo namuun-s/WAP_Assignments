@@ -1,0 +1,207 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    line-height: 1.4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    background-color: #f5f7f7;
+    color: #000000;
+    letter-spacing: 0.5px;
+}
+.container{
+    max-width: 700px;
+    margin: 0 auto;
+}
+section{
+    padding: 20px 30px;
+    background-color: #ffffff;
+    margin: 30px 0;
+    box-shadow:         1px 1px 10px 1px rgba(0,0,0,.4);
+}
+form, form input ,form select{    
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.input{
+    margin-bottom: 20px;
+}
+.input.text input, .input.select select, .input.date input{
+    padding: 7px;
+    border-radius: 4px;
+    border: 1px solid#d9d9d9;
+    width: 95%;
+}
+.input label{    
+    font-weight: 500;
+}
+.input.text label, .input.select label, .input.date{
+    display: block;
+    margin-bottom: 5px;
+}
+.tip{
+    margin-top: 5px;
+    font-size: smaller;
+    color: rgba(0,0,0,.6);
+}
+.submit input{
+    padding: 7px 15px;
+    background: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+}
+.ta-right{
+    text-align: right;
+}
+
+/*footer styles*/
+footer{
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 1px solid #cccccc; 
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+footer .validators a{
+    margin-left: 15px;
+}
+
+/*Additional styles for Web form 2*/
+header{
+    color: #ffffff;
+    padding: 25px 50px;
+    background: #4fb1ea; /* Old browsers */    
+    background: linear-gradient(to bottom,  #4fb1ea 0%,#239fe5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */    
+}
+.logo{
+    font-size: 20px;
+    font-weight: 500;
+    float: left;
+    margin-right: 80px;
+}
+.row::after{
+    content: " ";
+    display: block;
+    clear: both;
+}
+.col-half{
+    width: 50%;
+    float: left;
+}
+.demo2.container{
+    max-width: 1024px;
+}
+.demo2 .input.text input, .demo2 .input.select select, .demo2 .input.date input{
+    width: 90%;
+}
+nav a{
+    color: rgba(255,255,255,.9);
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 30px;
+    position: relative;
+    display: inline-block;
+}
+nav a::before{
+    content: " ";
+    width: 1px;
+    height: 100%;
+    background: rgba(255,255,255,.9);
+    display: block;
+    left: -30px;
+    top:0;
+    position: absolute;
+}
+nav a:hover{
+    color: #ffffff;
+}
+.demo2 .submit{
+    text-align: right;
+    padding-right: 30px;
+}
+.demo2 .submit input.btn{
+    background:none;
+    margin-left: 15px;
+}
+.demo2 .submit input.btn-submit{   
+    color: #007bff;
+    border: 1px solid #007bff;
+}
+.demo2 .submit input.btn-reset{
+    color: #13487c;
+    border: 1px solid #13487c;
+}
+.demo2 .submit a.btn-cancel{
+    color: #df600f;
+    border: 1px solid #df600f;
+    text-decoration: none;
+    padding: 7px 15px;
+    border-radius: 4px;    
+    margin-left: 15px; 
+}
+
+/*styles for JS Part*/
+.container.js{
+    max-width: 960px;
+}
+.wrapper{
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+.js-intro input{
+    width: 80px;
+}
+.js-intro input.medium{
+    width: 120px;
+}
+.js-intro input.long{
+    width: 200px;
+}
+label.result{
+    font-weight: 500;
+    margin-left: 20px;
+}
+.result span{
+    color: blue;
+}
+.code{
+    display: none;
+}
+.code.shown{
+    display: block;
+}
+.viewCode{
+    color: #2d39c5;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    float: right;
+}
+.viewCode.active{
+    color: #3ec77b;
+}
+.code{
+    padding: 10px;
+    background: #f5f7f7;
+    font-size: medium;
+    max-width: 350px;
+    margin:15px auto;
+}
+.code.longer{
+    max-width: 450px;
+}
+.code.longer2{
+    max-width: 550px;
+}
+
+/*Styles for Form data*/
+.submited-data{
+    margin-top: 25px;
+    border-top: 1px solid #ccc;
+}
+.submited-data #result p span{
+    text-transform: capitalize;
+    font-weight: 500;
+}

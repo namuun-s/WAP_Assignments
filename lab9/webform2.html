@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAP - Assignment 4 - Web Form 2</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">MUM Golden Dome Market ::: SRM System</div>
+        <nav>
+            <a href="/products">Products</a>
+            <a href="/suppliers">Suppliers</a>
+        </nav>
+    </header>
+    <div class="container demo2">
+        <section>
+            <h1>New Product Form</h1>
+
+            <form action="/some_url" method="POST" id="productForm" >
+                <div class="row">
+                    <div class="input text col-half">
+                        <label for="productNumber">Product Number</label>
+                        <input type="text" id="productNumber" name="productNumber" required placeholder="AB123" 
+                        pattern="^(?=.*\d)(?=.*[a-zA-Z]).{5}$" title="Product number must contain two letters and three numbers. Example: AB123"/>                        
+                    </div>
+                    <div class="input text col-half">
+                        <label for="quantityInStock">Quantity in stock</label>
+                        <input type="number" id="quantityInStock" name="quantityInStock" min="0" required />
+                    </div>
+                    <div class="input text col-half">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required pattern="^[a-zA-Z][a-zA-Z\-' ]*[a-zA-Z ]$" title="Name can be only letters." />    
+                    </div>
+                    <div class="input select col-half">
+                        <label for="supplier">Supplier</label>
+                        <select name="supplier" id="supplier" required>
+                            <option value="">Select a supplier</option>
+                            <option value="1">Supplier 1</option>
+                            <option value="2">Supplier 2</option>
+                            <option value="3">Supplier 3</option>
+                        </select>
+                    </div>
+                    <div class="input text col-half">
+                        <label for="unitPrice">Unit price</label>
+                        <input type="text" id="unitPrice" name="unitPrice" required pattern="[0-9]*(\.)?[0-9]?[0-9]?" title="Please enter a valid price."/>
+                    </div>
+                    <div class="input date col-half">
+                        <label for="dateSupplied">Date supplied</label>
+                        <!-- I didn't use input type "Date". Because it is giving me warning on the HTML Validator. -->
+                        <!-- <input type="date" id="dateSupplied" name="dateSupplied" /> -->
+                        <input type="text" id="dateSupplied" name="dateSupplied" placeholder="mm/dd/yyyy" pattern="^\d{1,2}\/\d{1,2}\/\d{4}$" title="Please enter a valid date. Example: 01/31/2020"/>
+                        <p class="tip">Enter a valid Date.</p>
+                    </div>
+                </div>
+                <div class="input submit">
+                    <input type="reset" class="btn btn-reset" value="Reset">
+                    <a href="#" class="btn btn-cancel">Cancel</a>
+                    <input type="submit" class="btn btn-submit" value="Submit">
+                </div>
+            </form>
+            <div class="submited-data">
+                <h3>Submited Data</h3>
+                <div id="result">
+
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="row">
+                <div class="col-half">&copy; Maharishi International University, Namuun Sainbayar</div>
+                
+                <div class="col-half ta-right validators">
+                    <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+                        <img src=http://jigsaw.w3.org/css-validator/images/vcss alt="Valid CSS!"/>
+                    </a>
+
+                    <a href="https://validator.w3.org/check/referer" target="_blank">
+                        <img src=http://mumstudents.org/cs472/2013-09/images/w3c-html.png alt="Validate"
+                        />
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="formSubmitJQuery.js"></script>
+</body>
+</html>
