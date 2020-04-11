@@ -1,0 +1,169 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    line-height: 1.8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+header{
+    padding: 10px 25px;
+    position: relative;
+}
+header a.logo{
+    font-size: 24px;
+    font-weight: 500;
+    display: inline-block;
+    float: left;
+    margin-right: 50px;
+}
+header a:hover{
+    text-decoration: none;
+}
+#time{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+.container{
+    max-width: 960px;
+}
+.books.container{
+    max-width: 1200px;
+}
+section.form{
+    margin: 30px 0 45px;
+}
+.input{
+    margin: 0 0 20px;
+}
+.input input, .input select{
+    display: block;
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    padding: 7px 15px;
+}
+.input label{
+    font-weight: 500;
+}
+.tip{
+    font-size: smaller;
+    color: gray;
+    font-style: italic;
+}
+.heading{
+    padding: 7px 15px;
+    border-radius: 5px 5px 0 0;
+}
+h2{
+    font-size: 28px;
+}
+
+#itemsList{
+    border:1px solid #ccc;
+    border-top:none;
+    margin-top: 30px;
+}
+.itemInfo{
+    padding:0 15px;
+    border-bottom: 1px solid #ccc;
+}
+#itemsList .itemInfo:last-child{
+    border-bottom: none;
+}
+.itemInfo .info-col{
+    display: inline-block;
+    padding: 10px 15px;
+    position: relative;
+}
+.itemInfo .info-col::after{
+    content: " ";
+    position: absolute;
+    right: 0;
+    top: 12px;
+    height: 20px;
+    width: 1px;
+    background-color: #767c82;
+}
+/*footer styles*/
+footer{
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 1px solid #cccccc; 
+    font-weight: 700;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+footer .validators{
+    text-align: right;
+}
+footer .validators a{
+    margin-left: 15px;
+}
+.rigth{
+    float: right;
+}
+.nav a{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+}
+.nav a:hover{
+    color: #343a40;
+}
+.welcome{
+    margin-top: 80px;
+}
+.body-txt p img{
+    margin:10px;
+    float: right;
+}
+.label{
+    font-weight: 500;
+}
+.input.radio label{
+    font-weight: normal;
+}
+.input.radio input{
+    width: auto;
+    display: inline;
+    margin-right: 15px;
+}
+.books .list{
+    margin: 40px 0;
+}
+.books h1{
+    float: left;
+}
+.books .btn-add{
+    float: right;
+}
+.clr{
+    display: block;
+    height: 0;
+    clear: both;
+}
+#msg, .note{
+    font-size: 17px;
+    font-style: italic;
+}
+.note{
+    margin: 25px 0;
+}
+.error{
+    color: red;
+}
+.success{
+    color: green;
+}
+#result{
+    display: none;
+    margin-top: 40px;
+    padding: 25px 0;
+    border-top: 1px solid #ccc;
+}
+#result.shown{
+    display: block;
+}
