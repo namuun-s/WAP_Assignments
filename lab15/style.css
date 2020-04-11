@@ -131,7 +131,7 @@ footer .validators a{
     display: inline;
     margin-right: 15px;
 }
-.books .list{
+.books .list, .books.list{
     margin: 40px 0;
 }
 .books h1{
@@ -166,4 +166,7 @@ footer .validators a{
 }
 #result.shown{
     display: block;
+}
+#loader{
+    display: none;
 }

@@ -5,10 +5,15 @@
  */
 $(function(){
 
-    // Getting books list JSON
-    $.ajax("https://elibraryrestapi.herokuapp.com/elibrary/api/book/list", { "type": "GET" })
+    $(document).ajaxStart(showLoader).ajaxStop(hideLoader);
+
+    if($("#booksList").hasClass("active")){
+        // Getting books list JSON
+        $.ajax("https://elibraryrestapi.herokuapp.com/elibrary/api/book/list", { "type": "GET" })
         .done(showBooksList)
         .fail(showFailureInfo);
+    }
+   
 
     // Form submit via Ajax
     $("#myForm").on("submit",function(evt){
@@ -28,6 +33,7 @@ $(function(){
         };
         console.log(data);
 
+        $("#loader").show();
         $.ajax("https://elibraryrestapi.herokuapp.com/elibrary/api/book/add", 
         { 
             type: "POST",
@@ -80,4 +86,10 @@ function showSuccessInfo(data){
     const msg = $('#msg');
     let p = $("<p>",{"text":"Congratulations! Your new book successfully added.","class":"success"});
     msg.append(p);
+}
+function showLoader(){
+    $("#loader").show();
+}
+function hideLoader(){
+    $("#loader").hide();
 }

@@ -1,0 +1,57 @@
+<section class="form">
+    <h1>New Book Form</h1>
+    <div class="note">
+        <strong>Note: </strong>Form fields marked with asterisk(*) are required.
+    </div>
+    <div id="loader" class="text-center"><img src="images/loader.gif" alt="Loading" /></div>
+    <div id="msg"></div>
+    <form method="POST" id="myForm">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input text">
+                    <label for="title">*Full Name</label>
+                    <input type="text" name="title" id="title" minlength="2" required />
+                </div>
+            </div>                   
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="input text">
+                    <label for="isbn">*ISBN</label>
+                    <input type="text" name="isbn" id="isbn" required 
+                   title="Please enter a valid ISBN." />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input text">
+                    <label for="overdueFee">*Overdue Fee per day</label>
+                    <input type="text" name="soverdueFeesn" id="overdueFee" required 
+                    pattern="[0-9]*(\.)?[0-9]?[0-9]?" title="Enter a valid decimal amount; in dollars and cents; no comma (e.g. 1.99)" />
+                    <div class="tip">Enter a valid decimal amount; in dollars and cents; no comma (e.g. 1.99)</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="input select">
+                    <label for="publisher">*Publisher</label>
+                    <input type="text" name="publisher" id="publisher" required />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input date">
+                    <div class="datePublished">*Date Published</div>
+                    <input type="text" id="datePublished" name="datePublished" placeholder="mm/dd/yyyy" pattern="^\d{1,2}\/\d{1,2}\/\d{4}$" title="Please enter a valid date. (e.g. 01/01/2020)"/>
+                </div>
+            </div>
+        </div>               
+       
+        <div class="btns">
+            <button type="reset" class="btn btn-secondary">Reset</button>
+            <button type="submit" class="btn btn-primary">Submit</button>                   
+        </div>
+    </form>
+    <div id="result">
+        <h2 class="text-success">New book information</h2>
+    </div>
+</section> 

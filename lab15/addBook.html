@@ -6,8 +6,6 @@
     <title>Library Books Management</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-    <script defer src="app.js"></script>
 </head>
 <body>
     <header class="bg-primary text-white ">
@@ -16,7 +14,7 @@
         </a>       
         <nav class="nav text-white">
             <a class="nav-link" href="index.html">Home</a>
-            <a class="nav-link" href="books.html">Books</a>
+            <a id="booksList" class="nav-link" href="books.html">Books</a>
             <a class="nav-link active" href="addBook.html">Add a New Book</a>
         </nav> 
     </header>
@@ -26,6 +24,7 @@
             <div class="note">
                 <strong>Note: </strong>Form fields marked with asterisk(*) are required.
             </div>
+            <div id="loader" class="text-center"><img src="images/loader.gif" alt="Loading" /></div>
             <div id="msg"></div>
             <form method="POST" id="myForm">
                 <div class="row">
@@ -83,5 +82,7 @@
             </div>
         </footer>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    <script src="app.js"></script>
 </body>
 </html>
