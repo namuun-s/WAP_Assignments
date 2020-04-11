@@ -70,7 +70,8 @@ function loadContent(thisLink){
         fetch("https://elibraryrestapi.herokuapp.com/elibrary/api/book/list")
         .then(res => res.json())
         .then(res => showBooksList(res))
-        .catch((error => console.log("Error: ", error)));
+        .catch((error => console.log("Error: ", error)))
+        .then(hideLoader);
                 
     }else if(thisLink.attr("id")=="addBook"){
         $("#content").load("parts/bookForm.html");
@@ -96,14 +97,17 @@ function loadContent(thisLink){
         $("#loader").show();
         fetch("https://elibraryrestapi.herokuapp.com/elibrary/api/book/add", 
         { 
-            type: "POST",
-            data: JSON.stringify(data),
-            dataType:"json",
-            contentType: "application/json; charset=utf-8",
+            method: "POST",
+            mode: "no-cors",            
+            header: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
         })
-        .then(res=>res.json())
+
         .then(showSuccessInfo)
-        .catch(showFailureInfo);
+        .catch((error => console.log("Error: ", error)))
+        .then(hideLoader);
         
         jQuery.each(data, function(index, value){
             console.log(index);
