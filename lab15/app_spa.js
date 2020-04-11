@@ -88,29 +88,28 @@ function loadContent(thisLink){
         const data = {
             isbn: $("#isbn").val(),
             title: $("#title").val(),
-            overdueFee: $("#overdueFee").val(),
+            overdueFee: parseFloat($("#overdueFee").val()),
             publisher: $("#publisher").val(),
             datePublished: dp.getFullYear() + "-" + month + "-" + dayOfMonth,
         };
-        console.log(data);
 
         $("#loader").show();
         fetch("https://elibraryrestapi.herokuapp.com/elibrary/api/book/add", 
         { 
-            method: "POST",
-            mode: "no-cors",            
-            header: {
-                'Content-Type': 'application/json'
+            method: 'POST',        
+            headers: {
+                'Accept':  'application/json',
+                'Content-Type': 'application/json',
+                'Cache': 'no-cache'
             },
             body: JSON.stringify(data)
         })
-
-        .then(showSuccessInfo)
-        .catch((error => console.log("Error: ", error)))
+        .then(res => res.json())
+        .then(res=>{showSuccessInfo();})
+        .catch(error => console.log("Error: ", error))
         .then(hideLoader);
-        
+
         jQuery.each(data, function(index, value){
-            console.log(index);
             let p = $('<p>',{"text": index.toUpperCase() + ": " + value});
             result.append(p);
             result.addClass("shown");
