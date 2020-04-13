@@ -1,0 +1,87 @@
+header{
+    padding: 10px 25px;
+}
+header a.logo{
+    font-size: 24px;
+    font-weight: 500;
+    float: left;
+    margin-right: 50px;
+}
+header a:hover{
+    text-decoration: none;
+}
+header nav a{
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+}
+.container{
+    max-width: 600px;
+}
+section.form{
+    margin: 30px 0 45px;
+}
+.input{
+    margin: 0 0 20px;
+}
+.input input, .input select{
+    display: block;
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    padding: 7px 15px;
+}
+.input label{
+    font-weight: 500;
+}
+.tip{
+    font-size: smaller;
+    color: gray;
+    font-style: italic;
+}
+.heading{
+    padding: 7px 15px;
+    border-radius: 5px 5px 0 0;
+}
+h2{
+    font-size: 28px;
+}
+
+#accountsList{
+    border:1px solid #ccc;
+    border-top:none;
+}
+.accountInfo{
+    padding:0 15px;
+    border-bottom: 1px solid #ccc;
+}
+#accountsList .accountInfo:last-child{
+    border-bottom: none;
+}
+.accountInfo .info-col{
+    display: inline-block;
+    padding: 10px 15px;
+    position: relative;
+}
+.accountInfo .info-col::after{
+    content: " ";
+    position: absolute;
+    right: 0;
+    top: 12px;
+    height: 20px;
+    width: 1px;
+    background-color: #767c82;
+}
+footer{
+    padding: 15px;
+    margin-top: 50px;
+}
+#loader{
+    display: none;
+}
+.error{
+    color: red;
+}
+.success{
+    color: green;
+}

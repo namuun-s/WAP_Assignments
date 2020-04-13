@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Banking App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <header class="bg-dark text-white ">
+        <a href="index.html" class="logo text-white">
+            Mini Banking App
+        </a>       
+        <nav class="nav text-white">
+            <a class="nav-link active" href="index.html">Home</a>
+            <a class="nav-link" href="form.html">New Account</a>
+        </nav>      
+        
+        <div class="rigth">
+            <div id="time"></div>
+        </div>
+    </header>
+    <div class="container">       
+        <section class="form">
+            <h1>Bank Account Form</h1>
+
+            <div id="loader" class="text-center"><img src="images/loader.gif" alt="Loading" /></div>
+            <div id="msg"></div>
+            <form method="POST" id="myForm">
+                <div class="input text">
+                    <label for="accountNo">Account No</label>
+                    <input type="text" name="accountNo" id="accountNo" placeholder="01-XXX-XXXX" required 
+                    pattern="01[-]\d{3}[-]\d{4}" title="Please enter valid account number. Format: 01-XXX-XXXX" />
+                    <div class="tip">Your unique account number</div>
+                </div>
+                <div class="input text">
+                    <label for="customerName">Customer Name</label>
+                    <input type="text" name="customerName" id="customerName" minlength="2" required placeholder="e.g: John B.Smith" 
+                    pattern="^[a-zA-Z]+(([\'\,\.\- ][a-zA-Z ])?[a-zA-Z]*)*$" title="Name can be only letters." />
+                    
+                </div>
+                <div class="input select">
+                    <label for="accountType">Type of Account</label>
+                    <select name="accountType" id="accountType" required  >
+                        <option value="">Select type of account</option>
+                        <option value="Checking">Checking</option>
+                        <option value="Saving">Saving</option>
+                        <option value="Loan">Loan</option>
+                    </select>
+                </div>
+                <div class="submit">
+                    <button type="submit" class="btn btn-primary">Create New Account</button>                   
+                </div>
+            </form>
+        </section>
+        <section class="list border-secondary">
+            <div class="heading bg-info text-white">
+                <h2>List of Customer Accounts</h2>
+            </div>
+            <div id="accountsList">
+
+            </div>
+        </section>
+    </div>
+    <footer class="bg-dark text-white">
+        <div class="container">
+            CS472 Final Exam ::: WAP - Namuun Sainbayar
+        </div>
+    </footer>
+</body>
+</html>
